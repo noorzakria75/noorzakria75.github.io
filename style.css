@@ -1,0 +1,824 @@
+/* =========================================================
+   SYED NOOR ZAKRIA — AI/ML PORTFOLIO STYLESHEET
+   Theme: Futuristic Glassmorphism — dark background, neon
+   blue/purple gradients, glass panels, CSS-only glow & motion.
+   Structure: Variables -> Reset -> Ambient Glow -> Typography
+   -> Layout helpers -> Nav -> Hero -> Glass cards -> Skills
+   -> Education -> Projects -> Timeline -> Experience -> Why
+   -> Contact -> Footer -> Responsive
+   ========================================================= */
+
+/* ---------- Variables ---------- */
+:root {
+  --bg: #05060f;
+  --bg-alt: #0a0e1f;
+  --neon-blue: #3fd0ff;
+  --neon-purple: #9b5cff;
+  --text: #eef1fb;
+  --text-muted: #9aa3c0;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+
+  --gradient-primary: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+  --radius: 14px;
+  --max-width: 1100px;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", Arial, sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+}
+
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  font-size: 16px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+label:focus-visible {
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Ambient background glow ---------- */
+.glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(110px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  animation: drift 16s ease-in-out infinite alternate;
+}
+
+.glow-blue {
+  width: 480px;
+  height: 480px;
+  background: var(--neon-blue);
+  top: -120px;
+  left: -100px;
+}
+
+.glow-purple {
+  width: 520px;
+  height: 520px;
+  background: var(--neon-purple);
+  bottom: -160px;
+  right: -120px;
+  animation-delay: -6s;
+}
+
+.glow-small {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  right: 10%;
+  opacity: 0.25;
+  animation-delay: -3s;
+}
+
+@keyframes drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, 40px) scale(1.08); }
+}
+
+/* Small AI/ML themed icon shadows — subtle decorative accents, not full backgrounds */
+.has-icon-shadow {
+  position: relative;
+}
+
+.icon-shadow {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.16;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.icon-shadow svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.icon-shadow-atom {
+  top: -10px;
+  right: -10px;
+  width: 320px;
+  height: 320px;
+}
+
+.icon-shadow-chip {
+  top: -20px;
+  right: 0;
+  width: 220px;
+  height: 220px;
+}
+
+@media (max-width: 720px) {
+  .icon-shadow {
+    display: none;
+  }
+}
+
+/* ---------- Layout helpers ---------- */
+main, .site-header, .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--neon-blue);
+  margin-bottom: var(--space-xs);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Glass card, base building block */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: var(--space-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(63, 208, 255, 0.12), 0 0 0 1px rgba(155, 92, 255, 0.08);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: #05060f;
+  box-shadow: 0 0 24px rgba(63, 208, 255, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 34px rgba(155, 92, 255, 0.5);
+}
+
+.btn-ghost {
+  background: var(--glass-bg);
+  border-color: var(--neon-blue);
+  color: var(--text);
+  box-shadow: 0 0 16px rgba(63, 208, 255, 0.15);
+}
+
+.btn-ghost:hover {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #05060f;
+  transform: translateY(-2px);
+  box-shadow: 0 0 34px rgba(155, 92, 255, 0.5);
+}
+
+.btn-whatsapp {
+  background: var(--glass-bg);
+  border-color: #25d366;
+  color: var(--text);
+  box-shadow: 0 0 16px rgba(37, 211, 102, 0.18);
+  margin-top: var(--space-sm);
+}
+
+.btn-whatsapp .btn-icon {
+  fill: #25d366;
+  transition: fill 0.15s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #25d366;
+  border-color: #25d366;
+  color: #05060f;
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.45);
+}
+
+.btn-whatsapp:hover .btn-icon {
+  fill: #05060f;
+}
+
+.btn-submit {
+  width: 100%;
+  text-align: center;
+}
+
+/* Floating WhatsApp action button */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 22px rgba(37, 211, 102, 0.55), 0 6px 18px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-fab svg {
+  width: 28px;
+  height: 28px;
+  fill: #05060f;
+}
+
+.whatsapp-fab:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 32px rgba(37, 211, 102, 0.75), 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(5, 6, 15, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo-dot {
+  color: var(--neon-purple);
+  -webkit-text-fill-color: var(--neon-purple);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 4px;
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--neon-blue);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-burger span {
+  width: 24px;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-inner {
+  max-width: 700px;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 8vw, 4.2rem);
+  line-height: 1.05;
+  margin-bottom: var(--space-xs);
+  background: var(--gradient-primary);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.hero-degree {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text);
+}
+
+.hero-bio {
+  max-width: 60ch;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ---------- About ---------- */
+.about-card p {
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  flex: 1 1 260px;
+}
+
+.skill-card-featured {
+  border-color: rgba(155, 92, 255, 0.35);
+}
+
+.skill-heading {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-sm);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(63, 208, 255, 0.35);
+  color: var(--text);
+  background: rgba(63, 208, 255, 0.1);
+  box-shadow: 0 0 10px rgba(63, 208, 255, 0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(63, 208, 255, 0.25);
+}
+
+.tag-neon {
+  border-color: transparent;
+  background: var(--gradient-primary);
+  color: #05060f;
+  font-weight: 600;
+  box-shadow: 0 0 16px rgba(155, 92, 255, 0.35);
+}
+
+.tag-neon:hover {
+  box-shadow: 0 0 22px rgba(155, 92, 255, 0.5);
+}
+
+.tag-list-compact {
+  margin-top: var(--space-sm);
+}
+
+/* ---------- Education ---------- */
+.edu-degree {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.edu-school {
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.edu-focus-label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--neon-blue);
+  margin-bottom: var(--space-xs);
+}
+
+/* ---------- Projects ---------- */
+.projects-grid {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1 1 300px;
+}
+
+.project-category {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--neon-blue);
+  margin-bottom: var(--space-xs);
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.project-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+/* ---------- Timeline (Current Learning) ---------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+  padding-left: 1.6rem;
+  border-left: 2px solid var(--glass-border);
+}
+
+.timeline-item {
+  position: relative;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.05rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 12px rgba(63, 208, 255, 0.6);
+}
+
+/* ---------- Experience ---------- */
+.experience-grid {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.experience-card {
+  flex: 1 1 220px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ---------- Why Choose Me ---------- */
+.why-grid {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.why-card {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.why-icon {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: var(--space-xs);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.why-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+/* ---------- Contact ---------- */
+.contact-wrap {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.contact-direct {
+  flex: 1 1 280px;
+}
+
+.contact-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-edu {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+}
+
+.contact-list .fact {
+  display: flex;
+  gap: var(--space-sm);
+  padding: 0.4rem 0;
+  flex-wrap: wrap;
+}
+
+.contact-list .fact dt {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--neon-blue);
+  flex: 0 0 70px;
+}
+
+.contact-list .fact dd a {
+  color: var(--text);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.contact-list .fact dd a:hover {
+  color: var(--neon-blue);
+  border-color: var(--neon-blue);
+}
+
+.contact-form {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  color: var(--text);
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--neon-blue);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #6c7593;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.footer-tagline {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 860px) {
+  .section,
+  .navbar,
+  .hero,
+  .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(5, 6, 15, 0.96);
+    border-bottom: 1px solid var(--glass-border);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .nav-links li {
+    padding: 0.9rem 1.5rem;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    max-height: 400px;
+  }
+
+  .glow {
+    opacity: 0.3;
+  }
+
+  .whatsapp-fab {
+    width: 50px;
+    height: 50px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .whatsapp-fab svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2.3rem;
+  }
+
+  .contact-list .fact {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .contact-list .fact dt {
+    flex: none;
+  }
+}

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syed Noor Zakria — AI &amp; Machine Learning Portfolio</title>
+  <meta name="description" content="Portfolio of Syed Noor Zakria — Software Engineering student focused on AI Automation, Machine Learning and Intelligent Software Systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient glow blobs, purely decorative -->
+  <div class="glow glow-blue" aria-hidden="true"></div>
+  <div class="glow glow-purple" aria-hidden="true"></div>
+  <div class="glow glow-blue glow-small" aria-hidden="true"></div>
+
+  <!-- Floating WhatsApp action button, present on every section -->
+  <a href="https://wa.me/923061539286" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3C7.03 3 3 6.98 3 11.88c0 1.76.5 3.4 1.36 4.8L3 21l4.46-1.31a9.3 9.3 0 0 0 4.54 1.17c4.97 0 9-3.98 9-8.88C21 6.98 16.97 3 12 3Zm0 16.13c-1.5 0-2.9-.42-4.08-1.15l-.29-.18-2.64.78.78-2.58-.19-.3a7.2 7.2 0 0 1-1.15-3.82c0-3.99 3.28-7.23 7.32-7.23s7.32 3.24 7.32 7.23-3.28 7.25-7.32 7.25Zm4.02-5.4c-.22-.11-1.3-.64-1.5-.71-.2-.08-.35-.11-.5.11-.14.21-.57.71-.7.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.08-.65-.58-1.1-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.14-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.5-1.21-.69-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.21-.76.75-.76 1.82 0 1.07.78 2.11.89 2.26.11.14 1.53 2.36 3.72 3.3.52.23.92.36 1.24.46.52.17 1 .14 1.37.09.42-.06 1.3-.53 1.48-1.05.18-.51.18-.95.13-1.05-.05-.1-.2-.16-.42-.27Z"/>
+    </svg>
+  </a>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#top" class="logo">SNZ<span class="logo-dot">.</span></a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="top" class="hero">
+      <div class="icon-shadow icon-shadow-atom" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <ellipse cx="100" cy="100" rx="90" ry="34" fill="none" stroke="var(--neon-blue)" stroke-width="2"/>
+          <ellipse cx="100" cy="100" rx="90" ry="34" fill="none" stroke="var(--neon-purple)" stroke-width="2" transform="rotate(60 100 100)"/>
+          <ellipse cx="100" cy="100" rx="90" ry="34" fill="none" stroke="var(--neon-blue)" stroke-width="2" transform="rotate(120 100 100)"/>
+          <circle cx="100" cy="100" r="9" fill="var(--neon-purple)"/>
+        </svg>
+      </div>
+      <div class="hero-inner">
+        <p class="eyebrow">// AI &amp; Machine Learning Portfolio</p>
+        <h1 class="hero-name">Syed Noor Zakria</h1>
+        <p class="hero-degree">BS Software Engineering Student — COMSATS University Islamabad</p>
+        <p class="hero-headline">AI Automation Enthusiast | Machine Learning Learner | Software Engineering Student</p>
+        <p class="hero-bio">
+          I am a Software Engineering student passionate about Artificial Intelligence, AI Automation,
+          Machine Learning, and intelligent software solutions. I enjoy exploring emerging AI technologies
+          while applying my software engineering knowledge to build practical, scalable, and user-focused
+          applications.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <p class="eyebrow">// Get to know me</p>
+      <h2 class="section-title">About Me</h2>
+
+      <div class="glass-card about-card">
+        <p>
+          I'm a BS Software Engineering student at COMSATS University Islamabad with a strong interest
+          in Artificial Intelligence and Machine Learning. I'm currently learning AI Automation, Prompt
+          Engineering, and intelligent software systems, building on a foundation of Frontend Development,
+          WordPress Development, Flutter, and Software Testing.
+        </p>
+        <p>
+          I'm passionate about continuous learning and solving real-world problems using AI — and I document
+          that journey by building and shipping things, not just reading about them.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section has-icon-shadow">
+      <div class="icon-shadow icon-shadow-chip" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <rect x="60" y="60" width="80" height="80" rx="8" fill="none" stroke="var(--neon-blue)" stroke-width="2"/>
+          <rect x="85" y="85" width="30" height="30" rx="4" fill="none" stroke="var(--neon-purple)" stroke-width="2"/>
+          <line x1="60" y1="78" x2="28" y2="78" stroke="var(--neon-blue)" stroke-width="2"/>
+          <line x1="60" y1="100" x2="28" y2="100" stroke="var(--neon-blue)" stroke-width="2"/>
+          <line x1="60" y1="122" x2="28" y2="122" stroke="var(--neon-blue)" stroke-width="2"/>
+          <line x1="140" y1="78" x2="172" y2="78" stroke="var(--neon-blue)" stroke-width="2"/>
+          <line x1="140" y1="100" x2="172" y2="100" stroke="var(--neon-blue)" stroke-width="2"/>
+          <line x1="140" y1="122" x2="172" y2="122" stroke="var(--neon-blue)" stroke-width="2"/>
+          <line x1="78" y1="60" x2="78" y2="28" stroke="var(--neon-purple)" stroke-width="2"/>
+          <line x1="100" y1="60" x2="100" y2="28" stroke="var(--neon-purple)" stroke-width="2"/>
+          <line x1="122" y1="60" x2="122" y2="28" stroke="var(--neon-purple)" stroke-width="2"/>
+          <line x1="78" y1="140" x2="78" y2="172" stroke="var(--neon-purple)" stroke-width="2"/>
+          <line x1="100" y1="140" x2="100" y2="172" stroke="var(--neon-purple)" stroke-width="2"/>
+          <line x1="122" y1="140" x2="122" y2="172" stroke="var(--neon-purple)" stroke-width="2"/>
+        </svg>
+      </div>
+      <p class="eyebrow">// What I work with</p>
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-grid">
+        <div class="glass-card skill-card skill-card-featured">
+          <h3 class="skill-heading">Artificial Intelligence</h3>
+          <ul class="tag-list">
+            <li class="tag tag-neon">AI Automation</li>
+            <li class="tag tag-neon">Prompt Engineering</li>
+            <li class="tag tag-neon">AI-Assisted Software Development</li>
+            <li class="tag tag-neon">Generative AI Concepts</li>
+            <li class="tag tag-neon">LLM Fundamentals</li>
+            <li class="tag tag-neon">AI Productivity Workflows</li>
+          </ul>
+        </div>
+
+        <div class="glass-card skill-card skill-card-featured">
+          <h3 class="skill-heading">Machine Learning</h3>
+          <ul class="tag-list">
+            <li class="tag tag-neon">ML Fundamentals</li>
+            <li class="tag tag-neon">Data Preprocessing</li>
+            <li class="tag tag-neon">Predictive Models</li>
+            <li class="tag tag-neon">Model Evaluation Concepts</li>
+            <li class="tag tag-neon">Feature Engineering Basics</li>
+            <li class="tag tag-neon">Python for Machine Learning</li>
+          </ul>
+        </div>
+
+        <div class="glass-card skill-card">
+          <h3 class="skill-heading">Programming</h3>
+          <ul class="tag-list">
+            <li class="tag">Python</li>
+            <li class="tag">HTML5</li>
+            <li class="tag">CSS3</li>
+            <li class="tag">JavaScript</li>
+            <li class="tag">PHP</li>
+            <li class="tag">Dart</li>
+          </ul>
+        </div>
+
+        <div class="glass-card skill-card">
+          <h3 class="skill-heading">Web Development</h3>
+          <ul class="tag-list">
+            <li class="tag">Responsive Design</li>
+            <li class="tag">Frontend Development</li>
+            <li class="tag">WordPress</li>
+            <li class="tag">Elementor Expert</li>
+            <li class="tag">Bootstrap</li>
+          </ul>
+        </div>
+
+        <div class="glass-card skill-card">
+          <h3 class="skill-heading">Mobile Development</h3>
+          <ul class="tag-list">
+            <li class="tag">Flutter</li>
+            <li class="tag">Dart</li>
+          </ul>
+        </div>
+
+        <div class="glass-card skill-card">
+          <h3 class="skill-heading">Quality Assurance</h3>
+          <ul class="tag-list">
+            <li class="tag">Manual Testing</li>
+            <li class="tag">Test Case Design</li>
+            <li class="tag">Bug Reporting</li>
+            <li class="tag">Software Quality Fundamentals</li>
+          </ul>
+        </div>
+
+        <div class="glass-card skill-card">
+          <h3 class="skill-heading">Soft Skills</h3>
+          <ul class="tag-list">
+            <li class="tag">Problem Solving</li>
+            <li class="tag">Critical Thinking</li>
+            <li class="tag">Communication</li>
+            <li class="tag">Team Collaboration</li>
+            <li class="tag">Continuous Learning</li>
+            <li class="tag">Adaptability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section">
+      <p class="eyebrow">// Academic background</p>
+      <h2 class="section-title">Education</h2>
+
+      <div class="glass-card education-card">
+        <h3 class="edu-degree">Bachelor of Science in Software Engineering</h3>
+        <p class="edu-school">COMSATS University Islamabad</p>
+        <p class="edu-focus-label">Current Focus</p>
+        <ul class="tag-list">
+          <li class="tag tag-neon">Artificial Intelligence</li>
+          <li class="tag tag-neon">Machine Learning</li>
+          <li class="tag tag-neon">AI Automation</li>
+          <li class="tag">Software Engineering</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <p class="eyebrow">// Selected work</p>
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="projects-grid">
+        <article class="glass-card project-card">
+          <span class="project-category">Artificial Intelligence</span>
+          <h3 class="project-title">AI Automation Practice</h3>
+          <p class="project-desc">
+            Designed and practiced AI automation workflows using prompt engineering techniques to
+            improve productivity, software development processes, documentation, and problem-solving.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">AI Tools</li>
+            <li class="tag">Prompt Engineering</li>
+            <li class="tag">Automation Concepts</li>
+          </ul>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-category">Machine Learning</span>
+          <h3 class="project-title">Traffic Accident Prediction System</h3>
+          <p class="project-desc">
+            Developed a predictive machine learning model to analyze historical traffic data and
+            estimate accident risk.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">Python</li>
+            <li class="tag">Machine Learning</li>
+          </ul>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-category">Web Development</span>
+          <h3 class="project-title">Online Voting System</h3>
+          <p class="project-desc">
+            Developed a secure online voting application with responsive user interfaces and
+            structured voting workflows.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">HTML</li>
+            <li class="tag">CSS</li>
+            <li class="tag">JavaScript</li>
+            <li class="tag">PHP</li>
+            <li class="tag">Bootstrap</li>
+          </ul>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-category">Python</span>
+          <h3 class="project-title">Railway Management System</h3>
+          <p class="project-desc">
+            Developed a railway management system capable of managing passengers, schedules,
+            bookings, and train operations.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">Python</li>
+          </ul>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-category">Mobile App Development</span>
+          <h3 class="project-title">Candy Crush Clone</h3>
+          <p class="project-desc">
+            Built a Flutter-based mobile game inspired by Candy Crush, featuring responsive
+            gameplay and interactive UI.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">Flutter</li>
+            <li class="tag">Dart</li>
+          </ul>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-category">Quality Assurance</span>
+          <h3 class="project-title">Online Bookstore Testing</h3>
+          <p class="project-desc">
+            Performed software testing including functional testing, usability evaluation,
+            bug reporting, and test case documentation.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">Manual Testing</li>
+            <li class="tag">Test Cases</li>
+          </ul>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-category">WordPress Development</span>
+          <h3 class="project-title">WordPress Business Website</h3>
+          <p class="project-desc">
+            Designed responsive business and portfolio websites using Elementor with modern
+            UI principles.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">WordPress</li>
+            <li class="tag">Elementor</li>
+          </ul>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-category">Web Development</span>
+          <h3 class="project-title">Pharmacy Management System</h3>
+          <p class="project-desc">
+            Built a fully offline pharmacy management system for a family-run pharmacy — handling
+            inventory, billing and receipt printing, sales history, expiry alerts and low-stock
+            monitoring, with local, JSON-exportable data storage.
+          </p>
+          <ul class="tag-list tag-list-compact">
+            <li class="tag">HTML</li>
+            <li class="tag">CSS</li>
+            <li class="tag">JavaScript</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CURRENT LEARNING ================= -->
+    <section id="learning" class="section">
+      <p class="eyebrow">// Roadmap</p>
+      <h2 class="section-title">Current Learning</h2>
+
+      <ul class="timeline">
+        <li class="timeline-item"><span class="timeline-dot"></span>AI Automation</li>
+        <li class="timeline-item"><span class="timeline-dot"></span>Machine Learning</li>
+        <li class="timeline-item"><span class="timeline-dot"></span>Prompt Engineering</li>
+        <li class="timeline-item"><span class="timeline-dot"></span>Intelligent Software Systems</li>
+        <li class="timeline-item"><span class="timeline-dot"></span>Generative AI</li>
+        <li class="timeline-item"><span class="timeline-dot"></span>AI Agents</li>
+        <li class="timeline-item"><span class="timeline-dot"></span>LLM Applications</li>
+        <li class="timeline-item"><span class="timeline-dot"></span>AI for Software Development</li>
+      </ul>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="section">
+      <p class="eyebrow">// Hands-on practice</p>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-grid">
+        <div class="glass-card experience-card">AI Automation Practice</div>
+        <div class="glass-card experience-card">Machine Learning Projects</div>
+        <div class="glass-card experience-card">Frontend Development</div>
+        <div class="glass-card experience-card">WordPress Website Development</div>
+        <div class="glass-card experience-card">Flutter Mobile Development</div>
+        <div class="glass-card experience-card">Quality Assurance Practice</div>
+        <div class="glass-card experience-card">University Software Engineering Projects</div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE ME ================= -->
+    <section id="why" class="section">
+      <p class="eyebrow">// Why work with me</p>
+      <h2 class="section-title">Why Choose Me</h2>
+
+      <div class="why-grid">
+        <div class="glass-card why-card">
+          <span class="why-icon" aria-hidden="true">◆</span>
+          <h3>Passion for AI</h3>
+        </div>
+        <div class="glass-card why-card">
+          <span class="why-icon" aria-hidden="true">◆</span>
+          <h3>Fast Learner</h3>
+        </div>
+        <div class="glass-card why-card">
+          <span class="why-icon" aria-hidden="true">◆</span>
+          <h3>Problem Solver</h3>
+        </div>
+        <div class="glass-card why-card">
+          <span class="why-icon" aria-hidden="true">◆</span>
+          <h3>Clean Development Practices</h3>
+        </div>
+        <div class="glass-card why-card">
+          <span class="why-icon" aria-hidden="true">◆</span>
+          <h3>Continuous Improvement</h3>
+        </div>
+        <div class="glass-card why-card">
+          <span class="why-icon" aria-hidden="true">◆</span>
+          <h3>Team Collaboration</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <p class="eyebrow">// Let's connect</p>
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-wrap">
+        <div class="glass-card contact-direct">
+          <p class="contact-name">Syed Noor Zakria</p>
+          <p class="contact-edu">BS Software Engineering — COMSATS University Islamabad</p>
+          <dl class="contact-list">
+            <div class="fact">
+              <dt>Phone</dt>
+              <dd><a href="tel:+923061539286">+92 306 1539286</a></dd>
+            </div>
+            <div class="fact">
+              <dt>Email</dt>
+              <dd><a href="mailto:noorzakria2@gmail.com">noorzakria2@gmail.com</a></dd>
+            </div>
+          </dl>
+          <a href="https://wa.me/923061539286" target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3C7.03 3 3 6.98 3 11.88c0 1.76.5 3.4 1.36 4.8L3 21l4.46-1.31a9.3 9.3 0 0 0 4.54 1.17c4.97 0 9-3.98 9-8.88C21 6.98 16.97 3 12 3Zm0 16.13c-1.5 0-2.9-.42-4.08-1.15l-.29-.18-2.64.78.78-2.58-.19-.3a7.2 7.2 0 0 1-1.15-3.82c0-3.99 3.28-7.23 7.32-7.23s7.32 3.24 7.32 7.23-3.28 7.25-7.32 7.25Zm4.02-5.4c-.22-.11-1.3-.64-1.5-.71-.2-.08-.35-.11-.5.11-.14.21-.57.71-.7.86-.13.14-.26.16-.48.05-.22-.11-.93-.34-1.77-1.08-.65-.58-1.1-1.3-1.22-1.52-.13-.21-.01-.33.1-.44.1-.1.22-.26.33-.39.11-.13.14-.21.22-.36.07-.14.04-.27-.02-.38-.06-.11-.5-1.21-.69-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.21-.76.75-.76 1.82 0 1.07.78 2.11.89 2.26.11.14 1.53 2.36 3.72 3.3.52.23.92.36 1.24.46.52.17 1 .14 1.37.09.42-.06 1.3-.53 1.48-1.05.18-.51.18-.95.13-1.05-.05-.1-.2-.16-.42-.27Z"/>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <form class="glass-card contact-form" action="#" method="post">
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-name">&copy; 2026 Syed Noor Zakria</p>
+    <p class="footer-tagline">Future AI Engineer | Machine Learning Enthusiast | Software Engineering Student</p>
+  </footer>
+
+</body>
+</html>
